@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AlmaConnect - Batch Alumni Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-12 px-4 shadow-xl">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 floating">2025 AlmaConnect</h1>
+            <p class="text-xl text-blue-200">Verified alumni network for batch connections</p>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container mx-auto py-12 px-4">
+        <!-- Verification Section -->
+        <div class="max-w-md mx-auto bg-purple-50 p-6 rounded-lg border border-purple-200 mb-8">
+            <h2 class="text-xl font-bold text-purple-800 mb-4 text-center">Alumni Verification</h2>
+            <p class="text-gray-600 mb-4 text-center">Enter your alumni credentials to access the network</p>
+            <input type="email" placeholder="School Email (ending with @school.edu)" class="w-full mb-3 p-2 border rounded">
+            <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded">
+                Verify My Status
+            </button>
+        </div>
+        <!-- Verification status will appear here -->
+        <div id="verificationStatus" class="mb-8 hidden"></div>
+        
+        <!-- Main Alumni Directory Section -->
+        <section class="mt-16 p-6 bg-white rounded-2xl shadow-lg">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 md:mb-0">Alumni Network</h2>
+                <div class="flex space-x-4">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        <i class="fas fa-search mr-2"></i>Advanced Search
+                    </button>
+                    <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
+                        <i class="fas fa-plus mr-2"></i>Add Profile
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 mb-8">
+                <!-- Graduation Year Filter -->
+                <div class="flex-1">
+                    <label for="yearFilter" class="block text-gray-700 text-sm font-bold mb-2">Graduation Year:</label>
+                    <select id="yearFilter" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white">
+                        <option value="">Any Year</option>
+                        <option value="2010">Before 2010</option>
+                        <option value="2015">2010-2015</option>
+                        <option value="2020">2016-2020</option>
+                        <option value="2023">2021-2023</option>
+                    </select>
+                </div>
+                <!-- Profession Filter -->
+                <div class="flex-1">
+                    <label for="professionFilter" class="block text-gray-700 text-sm font-bold mb-2">Filter by Profession:</label>
+                    <select id="professionFilter" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white">
+                        <option value="">All Professions</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <!-- Search by Name -->
+                <div class="flex-1">
+                    <label for="alumniSearch" class="block text-gray-700 text-sm font-bold mb-2">Search by Name:</label>
+                    <input type="text" id="alumniSearch" placeholder="Enter alumni name..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            </div>
+
+            <!-- Alumni Results Display -->
+            <div id="alumniResults" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Alumni cards will be populated by JavaScript -->
+                <p class="col-span-full text-center text-gray-500">Use the filters above to find alumni.</p>
+            </div>
+        </section>
+
+        <!-- AI Powered Alumni Matching -->
+        <div class="mt-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-6 rounded-2xl shadow-lg">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">AI-Powered Matching</h3>
+                    <p>Our smart system analyzes your profile to connect you with the most relevant alumni based on your:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li>Career interests</li>
+                        <li>Skills and expertise</li>
+                        <li>Academic background</li>
+                        <li>Industry preferences</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <button class="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-full text-lg shadow-md transform hover:scale-105 transition-all">
+                        Find Your Best Matches
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-blue-300">© 2025 AlmaConnect | Alumni Networking Platform</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
