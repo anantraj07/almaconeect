@@ -1,0 +1,64 @@
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f9fbff;
+  padding: 2rem;
+}
+h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.filters input, .filters select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+#alumniResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.alumni-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.alumni-card:hover {
+  transform: translateY(-5px);
+}
+.alumni-card h4 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 0.3rem;
+}
+.alumni-card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+.alumni-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.alumni-card button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.alumni-card button:hover {
+  background: #1d4ed8;
+}
